@@ -1,0 +1,49 @@
+# //  Questa Sim-64
+# //  Version 2022.2 linux_x86_64 Apr 25 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+add wave -position insertpoint  \
+vsim:/tb/alu_out
+add wave -position insertpoint  \
+vsim:/tb/MyMips/ALU_main/S_zero_out \
+vsim:/tb/MyMips/ALU_main/S_xor \
+vsim:/tb/MyMips/ALU_main/S_srl \
+vsim:/tb/MyMips/ALU_main/S_sra \
+vsim:/tb/MyMips/ALU_main/S_slt \
+vsim:/tb/MyMips/ALU_main/S_sll \
+vsim:/tb/MyMips/ALU_main/S_repl \
+vsim:/tb/MyMips/ALU_main/S_or \
+vsim:/tb/MyMips/ALU_main/S_nor \
+vsim:/tb/MyMips/ALU_main/S_movn \
+vsim:/tb/MyMips/ALU_main/S_lui \
+vsim:/tb/MyMips/ALU_main/S_and \
+vsim:/tb/MyMips/ALU_main/S_add_sub
+add wave -position insertpoint  \
+vsim:/tb/MyMips/ALU_main/S_zero_out \
+vsim:/tb/MyMips/ALU_main/S_xor \
+vsim:/tb/MyMips/ALU_main/S_srl \
+vsim:/tb/MyMips/ALU_main/S_sra \
+vsim:/tb/MyMips/ALU_main/S_slt \
+vsim:/tb/MyMips/ALU_main/S_sll \
+vsim:/tb/MyMips/ALU_main/S_repl \
+vsim:/tb/MyMips/ALU_main/S_or \
+vsim:/tb/MyMips/ALU_main/S_nor \
+vsim:/tb/MyMips/ALU_main/S_MX_OUT \
+vsim:/tb/MyMips/ALU_main/S_movn \
+vsim:/tb/MyMips/ALU_main/S_lui \
+vsim:/tb/MyMips/ALU_main/S_and \
+vsim:/tb/MyMips/ALU_main/S_add_sub \
+vsim:/tb/MyMips/ALU_main/Output \
+vsim:/tb/MyMips/ALU_main/B \
+vsim:/tb/MyMips/ALU_main/ALU_control \
+vsim:/tb/MyMips/ALU_main/A

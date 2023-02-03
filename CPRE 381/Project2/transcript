@@ -1,0 +1,215 @@
+# //  Questa Sim-64
+# //  Version 2022.2 linux_x86_64 Apr 25 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vlib work
+vcom -reportprogress 300 -work work /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 22:05:23 on Dec 10,2022
+# vcom -reportprogress 300 -work work /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_pipelineReg
+# -- Compiling architecture mixed of tb_pipelineReg
+# End time: 22:05:23 on Dec 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 22:05:29 on Dec 10,2022
+# vcom -reportprogress 300 -work work /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_pipelineReg
+# -- Compiling architecture mixed of tb_pipelineReg
+# End time: 22:05:29 on Dec 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vsim work.tb_pipelinereg -voptargs=+acc
+# vsim work.tb_pipelinereg -voptargs="+acc" 
+# Start time: 22:06:02 on Dec 10,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(205): (vopt-3473) Component instance "pipeline1 : registerIF_ID" is not bound.
+#         Region: /tb_pipelineReg
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(218): (vopt-3473) Component instance "pipeline2 : registerID_EX" is not bound.
+#         Region: /tb_pipelineReg
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(255): (vopt-3473) Component instance "pipeline3 : registerEX_MEM" is not bound.
+#         Region: /tb_pipelineReg
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(284): (vopt-3473) Component instance "pipeline4 : registerMEM_WB" is not bound.
+#         Region: /tb_pipelineReg
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_pipelinereg(mixed)#1
+# ** Warning: (vsim-3473) Component instance "pipeline1 : registerIF_ID" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline2 : registerID_EX" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline3 : registerEX_MEM" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline4 : registerMEM_WB" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+add wave -position insertpoint  \
+sim:/tb_pipelinereg/CLK \
+sim:/tb_pipelinereg/Imem \
+sim:/tb_pipelinereg/DMEM \
+sim:/tb_pipelinereg/halt \
+sim:/tb_pipelinereg/MemtoReg \
+sim:/tb_pipelinereg/MemWrite \
+sim:/tb_pipelinereg/ALUOp \
+sim:/tb_pipelinereg/ALUSrc \
+sim:/tb_pipelinereg/regWrite \
+sim:/tb_pipelinereg/JumpLink \
+sim:/tb_pipelinereg/ALU \
+sim:/tb_pipelinereg/regDst \
+sim:/tb_pipelinereg/PCplus4 \
+sim:/tb_pipelinereg/RS \
+sim:/tb_pipelinereg/RT \
+sim:/tb_pipelinereg/reg_addr \
+sim:/tb_pipelinereg/SignExtended \
+sim:/tb_pipelinereg/p1_RST \
+sim:/tb_pipelinereg/p1_WE \
+sim:/tb_pipelinereg/p1_Imem \
+sim:/tb_pipelinereg/p1_PCplus4 \
+sim:/tb_pipelinereg/p2_RST \
+sim:/tb_pipelinereg/p2_WE \
+sim:/tb_pipelinereg/p2_MemtoReg \
+sim:/tb_pipelinereg/p2_MemWrite \
+sim:/tb_pipelinereg/p2_ALUSrc \
+sim:/tb_pipelinereg/p2_regWrite \
+sim:/tb_pipelinereg/p2_JumpLink \
+sim:/tb_pipelinereg/p2_halt \
+sim:/tb_pipelinereg/p2_regDst \
+sim:/tb_pipelinereg/p2_ALUOp \
+sim:/tb_pipelinereg/p2_Imem \
+sim:/tb_pipelinereg/p2_SignExtended \
+sim:/tb_pipelinereg/p2_PCplus4 \
+sim:/tb_pipelinereg/p2_RS \
+sim:/tb_pipelinereg/p2_RT \
+sim:/tb_pipelinereg/p2_reg_addr \
+sim:/tb_pipelinereg/p3_RST \
+sim:/tb_pipelinereg/p3_WE \
+sim:/tb_pipelinereg/p3_MemtoReg \
+sim:/tb_pipelinereg/p3_MemWrite \
+sim:/tb_pipelinereg/p3_regWrite \
+sim:/tb_pipelinereg/p3_JumpLink \
+sim:/tb_pipelinereg/p3_regDst \
+sim:/tb_pipelinereg/p3_halt \
+sim:/tb_pipelinereg/p3_PCplus4 \
+sim:/tb_pipelinereg/p3_RT \
+sim:/tb_pipelinereg/p3_ALU \
+sim:/tb_pipelinereg/p3_reg_addr \
+sim:/tb_pipelinereg/p4_RST \
+sim:/tb_pipelinereg/p4_WE \
+sim:/tb_pipelinereg/p4_MemtoReg \
+sim:/tb_pipelinereg/p4_regWrite \
+sim:/tb_pipelinereg/p4_JumpLink \
+sim:/tb_pipelinereg/p4_halt \
+sim:/tb_pipelinereg/p4_regDst \
+sim:/tb_pipelinereg/p4_PCplus4 \
+sim:/tb_pipelinereg/p4_DMEM \
+sim:/tb_pipelinereg/p4_ALU \
+sim:/tb_pipelinereg/p4_reg_addr
+run 400
+# Causality operation skipped due to absence of debug database file
+restart
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# ** Warning: (vsim-3473) Component instance "pipeline1 : registerIF_ID" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline2 : registerID_EX" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline3 : registerEX_MEM" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline4 : registerMEM_WB" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+run 200
+vcom -reportprogress 300 -work work /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 22:34:19 on Dec 10,2022
+# vcom -reportprogress 300 -work work /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Loading package ENV
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(5): (vcom-1516) Package "STD.ENV" does not exist in this language version.
+# -- Compiling entity tb_pipelineReg
+# -- Compiling architecture mixed of tb_pipelineReg
+# End time: 22:34:19 on Dec 10,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(205): (vopt-3473) Component instance "pipeline1 : registerIF_ID" is not bound.
+#         Region: /tb_pipelineReg
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(218): (vopt-3473) Component instance "pipeline2 : registerID_EX" is not bound.
+#         Region: /tb_pipelineReg
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(255): (vopt-3473) Component instance "pipeline3 : registerEX_MEM" is not bound.
+#         Region: /tb_pipelineReg
+# ** Warning: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd(284): (vopt-3473) Component instance "pipeline4 : registerMEM_WB" is not bound.
+#         Region: /tb_pipelineReg
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb_pipelinereg(mixed)#1
+# ** Warning: (vsim-3473) Component instance "pipeline1 : registerIF_ID" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline2 : registerID_EX" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline3 : registerEX_MEM" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline4 : registerMEM_WB" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+run 20
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=5.
+# ** Warning: (vsim-3473) Component instance "pipeline1 : registerIF_ID" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline2 : registerID_EX" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline3 : registerEX_MEM" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+# ** Warning: (vsim-3473) Component instance "pipeline4 : registerMEM_WB" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /tb_pipelinereg File: /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+run 40
+add wave -position insertpoint  \
+sim:/tb_pipelinereg/p2_Imem
+add wave -position insertpoint  \
+sim:/tb_pipelinereg/p2_ALUOp
+add wave -position insertpoint  \
+sim:/tb_pipelinereg/p2_ALUSrc
+add wave -position insertpoint  \
+sim:/tb_pipelinereg/p2_regDst
+add wave -position insertpoint  \
+sim:/tb_pipelinereg/p2_regWrite
+# End time: 23:14:26 on Dec 10,2022, Elapsed time: 1:08:24
+# Errors: 0, Warnings: 9

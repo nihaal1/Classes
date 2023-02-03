@@ -1,0 +1,69 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11e vcom 2022.2 2022.04, Apr 25 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381
+T_opt
+!s110 1670734589
+VH;am7YC`eZGa4TUKekaZc0
+04 14 5 work tb_pipelinereg mixed 1
+=3-6805ca946ace-639562fd-9544e-ed7
+R0
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2022.2;75
+Etb_pipelinereg
+Z2 w1670733182
+Z3 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
+Z4 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+Z5 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z6 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 2
+R1
+Z7 8/home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+Z8 F/home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd
+l0
+L9 1
+V;?Y`cP54NUl1h_4D4l?@`2
+!s100 Y]0?dN4KT4W:U2CG;k>T91
+Z9 OL;C;2022.2;75
+32
+Z10 !s110 1670733259
+!i10b 1
+Z11 !s108 1670733259.000000
+Z12 !s90 -reportprogress|300|-work|work|/home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd|
+Z13 !s107 /home/kbeljaam/CprE381/proj/Project2/project-2-cpre-381/test/tb_pipelineReg.vhd|
+!i113 0
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
+Amixed
+R3
+R4
+R5
+R6
+DEx4 work 14 tb_pipelinereg 0 22 ;?Y`cP54NUl1h_4D4l?@`2
+!i122 2
+l202
+L13 435
+Vj3M`U_D1U1R1=WdoTBI];0
+!s100 ea?D?mlUz[0?6niS^OBTC1
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15

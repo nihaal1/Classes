@@ -1,0 +1,121 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 240 176)
+	(text "reg_file" (rect 5 0 48 15)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 143 28 156)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 17 15)(font "Intel Clear" (font_size 8)))
+		(text "clk" (rect 21 27 38 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst_n" (rect 0 0 30 15)(font "Intel Clear" (font_size 8)))
+		(text "rst_n" (rect 21 43 51 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "wr_en" (rect 0 0 36 15)(font "Intel Clear" (font_size 8)))
+		(text "wr_en" (rect 21 59 57 74)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "wr_addr[1..0]" (rect 0 0 76 15)(font "Intel Clear" (font_size 8)))
+		(text "wr_addr[1..0]" (rect 21 75 97 90)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "wr_dat[3..0]" (rect 0 0 68 15)(font "Intel Clear" (font_size 8)))
+		(text "wr_dat[3..0]" (rect 21 91 89 106)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "rd_addr_a[1..0]" (rect 0 0 87 15)(font "Intel Clear" (font_size 8)))
+		(text "rd_addr_a[1..0]" (rect 21 107 108 122)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "rd_addr_b[1..0]" (rect 0 0 88 15)(font "Intel Clear" (font_size 8)))
+		(text "rd_addr_b[1..0]" (rect 21 123 109 138)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "rd_dat_a[3..0]" (rect 0 0 79 15)(font "Intel Clear" (font_size 8)))
+		(text "rd_dat_a[3..0]" (rect 124 27 203 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "rd_dat_b[3..0]" (rect 0 0 80 15)(font "Intel Clear" (font_size 8)))
+		(text "rd_dat_b[3..0]" (rect 123 43 203 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 48)(pt 208 48)(line_width 3))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "HEX3[3..0]" (rect 0 0 61 15)(font "Intel Clear" (font_size 8)))
+		(text "HEX3[3..0]" (rect 142 59 203 74)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 64)(pt 208 64)(line_width 3))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "HEX2[3..0]" (rect 0 0 61 15)(font "Intel Clear" (font_size 8)))
+		(text "HEX2[3..0]" (rect 142 75 203 90)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 80)(pt 208 80)(line_width 3))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "HEX1[3..0]" (rect 0 0 61 15)(font "Intel Clear" (font_size 8)))
+		(text "HEX1[3..0]" (rect 142 91 203 106)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 96)(pt 208 96)(line_width 3))
+	)
+	(port
+		(pt 224 112)
+		(output)
+		(text "HEX0[3..0]" (rect 0 0 61 15)(font "Intel Clear" (font_size 8)))
+		(text "HEX0[3..0]" (rect 142 107 203 122)(font "Intel Clear" (font_size 8)))
+		(line (pt 224 112)(pt 208 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 144))
+	)
+)

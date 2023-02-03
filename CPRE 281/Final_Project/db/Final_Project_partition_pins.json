@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "E",
+					"strict" : false
+				},
+				{
+					"name" : "F",
+					"strict" : false
+				},
+				{
+					"name" : "G",
+					"strict" : false
+				},
+				{
+					"name" : "A9",
+					"strict" : false
+				},
+				{
+					"name" : "B10",
+					"strict" : false
+				},
+				{
+					"name" : "C11",
+					"strict" : false
+				},
+				{
+					"name" : "D12",
+					"strict" : false
+				},
+				{
+					"name" : "E13",
+					"strict" : false
+				},
+				{
+					"name" : "F14",
+					"strict" : false
+				},
+				{
+					"name" : "G15",
+					"strict" : false
+				},
+				{
+					"name" : "A16",
+					"strict" : false
+				},
+				{
+					"name" : "B17",
+					"strict" : false
+				},
+				{
+					"name" : "C18",
+					"strict" : false
+				},
+				{
+					"name" : "D19",
+					"strict" : false
+				},
+				{
+					"name" : "E20",
+					"strict" : false
+				},
+				{
+					"name" : "F21",
+					"strict" : false
+				},
+				{
+					"name" : "G22",
+					"strict" : false
+				},
+				{
+					"name" : "A23",
+					"strict" : false
+				},
+				{
+					"name" : "B24",
+					"strict" : false
+				},
+				{
+					"name" : "C25",
+					"strict" : false
+				},
+				{
+					"name" : "D26",
+					"strict" : false
+				},
+				{
+					"name" : "E27",
+					"strict" : false
+				},
+				{
+					"name" : "F28",
+					"strict" : false
+				},
+				{
+					"name" : "G29",
+					"strict" : false
+				},
+				{
+					"name" : "error_over",
+					"strict" : false
+				},
+				{
+					"name" : "error_under",
+					"strict" : false
+				},
+				{
+					"name" : "mode[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dat_n[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "CLRN",
+					"strict" : false
+				},
+				{
+					"name" : "ex_n",
+					"strict" : false
+				},
+				{
+					"name" : "dat_n[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dat_n[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dat_n[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

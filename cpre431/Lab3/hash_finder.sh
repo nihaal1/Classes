@@ -6,7 +6,7 @@ output_hash="hashes.txt"
 #password_hash='$6$2Ff.cblr$QwoNFOAme5xy5/anjAsZVIDrZdBKZ.hZ6UIIdLU9D4DDEs3O.CbRsICaVxxdQOTG2TOHYSHDwfdsrG0WGsXVB/'
 #password_hash='$6$zZKc4nOX$Rac9mB17TLeFgE/TOH0gTgRnAmaNk67ezuZo4fQAOSkulEKrrW6sum0uElLvmAeBqhf0k/jCYn2dddJCC0QzI1'
 #password_hash='$6$dCPTizMy$b8Fiueet0w08JR66mI3UPg.U7ertejWDHTDCAyqbVSjhhLgTu8N2/51R496408q356m.gmJSjG.u89L.3K8HH.'
-#password_hash='$6$0Ptm7uW6$9cYOHvx3S6dJBgK4ZhVq.bPHJlaMH.KV/59bsX2UYVSBp6RUit6KKFLnuoKz5L5yHMH75YZymLcil9uBhV4XW.'
+password_hash='$6$0Ptm7uW6$9cYOHvx3S6dJBgK4ZhVq.bPHJlaMH.KV/59bsX2UYVSBp6RUit6KKFLnuoKz5L5yHMH75YZymLcil9uBhV4XW.'
 password_hash='$6$QpU0v3n/$Z5BKWAKu6SsZMI4KStZmlR/IZuhE9Ts.cezqBca3iApKmbT/GSBC1GUHf0I0mmytOdmqzclHkT47idGnpmHoe0'
 
  > "$output_hash"
@@ -26,8 +26,7 @@ do
         if [ "$hash" = "$password_hash" ]; then
                 #output_hash="$line"
                 echo "$line" >> "$output_hash"
-		break
+                break
         fi
 
 done < "$filename"
-

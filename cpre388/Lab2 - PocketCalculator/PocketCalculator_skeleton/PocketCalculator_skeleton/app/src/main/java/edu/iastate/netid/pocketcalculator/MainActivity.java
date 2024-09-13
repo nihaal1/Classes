@@ -58,6 +58,41 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onAddClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.ADD);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onSubClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.SUBTRACT);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+
+    public void onMulClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.MULTIPLY);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+
+    public void onDivClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.DIVIDE);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+
     public void onOneClicked(View view) {
         try {
             mCalculationStream.inputDigit(CalculationStream.Digit.ONE);

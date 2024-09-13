@@ -41,6 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:onClick="onDivClicked"
             android:text="/" />
 
         <Button
@@ -48,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:onClick="onMulClicked"
             android:text="*" />
 
         <Button
@@ -55,6 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:onClick="onSubClicked"
             android:text="-" />
 
         <!-- Row 2: Numbers 7, 8, 9, and Add Button -->
@@ -87,6 +90,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:onClick="onAddClicked"
             android:text="+" />
 
         <!-- Row 3: Numbers 4, 5, 6 -->

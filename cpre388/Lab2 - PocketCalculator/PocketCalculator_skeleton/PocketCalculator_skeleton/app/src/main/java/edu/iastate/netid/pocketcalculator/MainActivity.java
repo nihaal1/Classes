@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     public void onOneClicked(View view) {
         try {
             mCalculationStream.inputDigit(CalculationStream.Digit.ONE);

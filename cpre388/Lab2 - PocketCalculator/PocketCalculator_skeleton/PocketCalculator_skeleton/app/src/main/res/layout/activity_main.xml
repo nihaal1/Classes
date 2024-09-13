@@ -148,6 +148,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:onClick="onEqualClicked"
             android:text="=" />
 
         <!-- Row 5: Number 0 and Decimal Point -->

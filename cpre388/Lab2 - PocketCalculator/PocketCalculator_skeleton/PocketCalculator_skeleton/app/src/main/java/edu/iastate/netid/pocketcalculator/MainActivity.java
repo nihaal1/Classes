@@ -50,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    }
 
+    public void onClearClicked(View view) {
+        try {
+            mCalculationStream.clear();
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
     public void onOneClicked(View view) {
         try {
             mCalculationStream.inputDigit(CalculationStream.Digit.ONE);

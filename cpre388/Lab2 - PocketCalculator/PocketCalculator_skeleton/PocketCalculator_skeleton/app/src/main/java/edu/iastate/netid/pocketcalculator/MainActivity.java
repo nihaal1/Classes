@@ -92,7 +92,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    public void onDotClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.DECIMAL);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
 
     public void onOneClicked(View view) {
         try {

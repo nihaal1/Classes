@@ -1,156 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Root element: LinearLayout -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"  <!-- The layout width will stretch to the parent's full width -->
-    android:layout_height="match_parent"  <!-- The layout height will stretch to the parent's full height -->
-    android:orientation="vertical"  <!-- Arranges child views in a vertical column -->
-    android:gravity="center"  <!-- Aligns the child views in the center of the screen -->
-    android:padding="16dp">  <!-- Adds padding inside the edges of the layout -->
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
 
     <!-- TextView: Display Screen for Calculator -->
-    <TextView
-        android:id="@+id/display"  <!-- Unique identifier for the display TextView -->
-        android:layout_width="match_parent"  <!-- The TextView will stretch to fill the full width -->
-        android:layout_height="wrap_content"  <!-- The height will be just enough to fit the content -->
-        android:text="0"  <!-- Initial text displayed on the calculator is "0" -->
-        android:gravity="end"  <!-- Aligns the text to the right side (end) -->
-        android:textSize="36sp"  <!-- Text size is set to 36 scale-independent pixels for readability -->
-        android:padding="24dp"  <!-- Adds padding inside the TextView for spacing -->
-        android:background="#EEEEEE"  <!-- Light grey background color for the display -->
-        android:textColor="#000000" />  <!-- Black text color for the numbers -->
+<TextView
+android:id="@+id/display"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="0"
+android:gravity="end"
+android:textSize="36sp"
+android:padding="24dp"
+android:background="#EEEEEE"
+android:textColor="#000000" />
 
     <!-- GridLayout: Contains buttons for numbers and operators -->
-    <GridLayout
-        android:layout_width="match_parent"  <!-- GridLayout takes the full width of the screen -->
-        android:layout_height="wrap_content"  <!-- Height adjusts to fit the content -->
-        android:columnCount="4"  <!-- Defines 4 columns for the grid -->
-        android:rowCount="5"  <!-- Defines 5 rows for the grid -->
-        android:layout_gravity="center">  <!-- Centers the GridLayout within the parent layout -->
+<GridLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:columnCount="4"
+android:rowCount="5"
+android:layout_gravity="center">
 
-        <!-- Row 1: Clear, Divide, Multiply, Subtract Buttons -->
-        <Button
-            android:id="@+id/btnClear"  <!-- Unique identifier for the Clear button -->
-            android:layout_width="0dp"  <!-- Zero width, but the button's width will be calculated by column weight -->
-            android:layout_height="wrap_content"  <!-- Height will wrap based on button content -->
-            android:layout_columnWeight="1"  <!-- This button will take 1/4 of the width in this row -->
-            android:text="C" />  <!-- The text label on the button is "C" (for clear) -->
+<!-- Row 1: Clear, Divide, Multiply, Subtract Buttons -->
+<Button
+    android:id="@+id/btnClear"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="C" />
 
-        <Button
-            android:id="@+id/btnDiv"  <!-- Unique identifier for the Division button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="/" />  <!-- The text label for the Division operator -->
+<Button
+    android:id="@+id/btnDiv"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="/" />
 
-        <Button
-            android:id="@+id/btnMul"  <!-- Unique identifier for the Multiply button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="*" />  <!-- The text label for the Multiplication operator -->
+<Button
+    android:id="@+id/btnMul"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="*" />
 
-        <Button
-            android:id="@+id/btnSub"  <!-- Unique identifier for the Subtract button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="-" />  <!-- The text label for the Subtraction operator -->
+<Button
+    android:id="@+id/btnSub"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="-" />
 
-        <!-- Row 2: Numbers 7, 8, 9, and Add Button -->
-        <Button
-            android:id="@+id/btn7"  <!-- Unique identifier for the number 7 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="7" />  <!-- The text label for the button is "7" -->
+<!-- Row 2: Numbers 7, 8, 9, and Add Button -->
+<Button
+    android:id="@+id/btn7"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="7" />
 
-        <Button
-            android:id="@+id/btn8"  <!-- Unique identifier for the number 8 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="8" />  <!-- The text label for the button is "8" -->
+<Button
+    android:id="@+id/btn8"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="8" />
 
-        <Button
-            android:id="@+id/btn9"  <!-- Unique identifier for the number 9 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="9" />  <!-- The text label for the button is "9" -->
+<Button
+    android:id="@+id/btn9"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="9" />
 
-        <Button
-            android:id="@+id/btnAdd"  <!-- Unique identifier for the Add button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="+" />  <!-- The text label for the Addition operator -->
+<Button
+    android:id="@+id/btnAdd"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="+" />
 
-        <!-- Row 3: Numbers 4, 5, 6 -->
-        <Button
-            android:id="@+id/btn4"  <!-- Unique identifier for the number 4 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="4" />
+<!-- Row 3: Numbers 4, 5, 6 -->
+<Button
+    android:id="@+id/btn4"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="4" />
 
-        <Button
-            android:id="@+id/btn5"  <!-- Unique identifier for the number 5 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="5" />
+<Button
+    android:id="@+id/btn5"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="5" />
 
-        <Button
-            android:id="@+id/btn6"  <!-- Unique identifier for the number 6 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="6" />
+<Button
+    android:id="@+id/btn6"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="6" />
 
-        <!-- Row 4: Numbers 1, 2, 3, and Equal Button -->
-        <Button
-            android:id="@+id/btn1"  <!-- Unique identifier for the number 1 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="1" />
+<!-- Row 4: Numbers 1, 2, 3, and Equal Button -->
+<Button
+    android:id="@+id/btn1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="1" />
 
-        <Button
-            android:id="@+id/btn2"  <!-- Unique identifier for the number 2 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="2" />
+<Button
+    android:id="@+id/btn2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="2" />
 
-        <Button
-            android:id="@+id/btn3"  <!-- Unique identifier for the number 3 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="3" />
+<Button
+    android:id="@+id/btn3"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="3" />
 
-        <Button
-            android:id="@+id/btnEqual"  <!-- Unique identifier for the Equal button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="=" />  <!-- The text label for the Equal sign -->
+<Button
+    android:id="@+id/btnEqual"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="=" />
 
-        <!-- Row 5: Number 0 and Decimal Point -->
-        <Button
-            android:id="@+id/btn0"  <!-- Unique identifier for the number 0 button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="2"  <!-- This button spans two columns -->
-            android:text="0" />  <!-- The text label for the button is "0" -->
+<!-- Row 5: Number 0 and Decimal Point -->
+<Button
+    android:id="@+id/btn0"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="2"
+    android:text="0" />
 
-        <Button
-            android:id="@+id/btnDot"  <!-- Unique identifier for the Decimal Point button -->
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="." />  <!-- The text label for the Decimal Point -->
+<Button
+    android:id="@+id/btnDot"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_columnWeight="1"
+    android:text="." />
 
-    </GridLayout>  <!-- End of GridLayout for the calculator buttons -->
-
-</LinearLayout>  <!-- End of the root LinearLayout -->
+</GridLayout>
+</LinearLayout>

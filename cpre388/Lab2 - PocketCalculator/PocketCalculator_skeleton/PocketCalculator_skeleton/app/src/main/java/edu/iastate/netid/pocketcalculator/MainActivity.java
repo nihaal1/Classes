@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
            the instance of the calculator display's TextView.  You need to create this TextView
            and set its ID to CalculatorDisplay in your layout resource file.
          */
-        //mCalculatorDisplay = findViewById(R.id.CalculatorDisplay);
+//        mCalculatorDisplay = findViewById(R.id.CalculatorDisplay);
+        mCalculatorDisplay = findViewById(R.id.display);
     }
 
     /* TODO - add event listeners for your calculator's buttons. See the model's API to figure out
@@ -37,6 +38,144 @@ public class MainActivity extends AppCompatActivity {
     public void onEqualClicked(View view) {
         try {
             mCalculationStream.calculateResult();
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+//    public void onNumberClicked(View view){
+//        switch (view.getId()){
+//            case R.id.btn0:
+//
+//        }
+//    }
+
+    public void onClearClicked(View view) {
+        try {
+            mCalculationStream.clear();
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onAddClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.ADD);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onSubClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.SUBTRACT);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+
+    public void onMulClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.MULTIPLY);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+
+    public void onDivClicked(View view) {
+        try {
+            mCalculationStream.inputOperation(CalculationStream.Operation.DIVIDE);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onDotClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.DECIMAL);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onOneClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.ONE);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onTwoClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.TWO);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onThreeClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.THREE);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onFourClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.FOUR);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onFiveClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.FIVE);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onSixClicked(View view) {
+        try {
+          mCalculationStream.inputDigit(CalculationStream.Digit.SIX);
+        } finally {
+            updateCalculatorDisplay();
+         }
+    }
+
+
+    public void onSevenClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.SEVEN);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onEightClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.EIGHT);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onNineClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.NINE);
+        } finally {
+            updateCalculatorDisplay();
+        }
+    }
+
+    public void onZeroClicked(View view) {
+        try {
+            mCalculationStream.inputDigit(CalculationStream.Digit.ZERO);
         } finally {
             updateCalculatorDisplay();
         }

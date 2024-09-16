@@ -1,4 +1,4 @@
-package com.example.pocketcalculator; 
+package edu.iastate.netid.pocketcalculator;
 // Declares the package for this application
 
 import android.os.Bundle; 

@@ -2,18 +2,12 @@ package com.example.stopwatchsample;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
-import android.widget.TextView;
-import android.widget.Button;
-import static android.text.format.DateUtils.formatElapsedTime;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
         // Initialize ViewModel
         viewModel = new ViewModelProvider(this).get(StopwatchViewModel.class);
 
-        // TODO: Initialize UI components (TextView, Buttons)
+        // Initialize UI components (TextView, Buttons)
         tvTime = findViewById(R.id.tvElapsedTime);
         btnStartStop = findViewById(R.id.btnStartStop);
         btnReset = findViewById(R.id.btnReset);
 
-        // TODO: Set up button listeners for Start/Stop and Reset
+        // Observe LiveData from ViewModel
         viewModel.getElapsedTime().observe(this, new Observer<Long>() {
             @Override
             public void onChanged(Long elapsedTime) {
@@ -42,10 +36,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnStartStop.setOnClickListener(new View.OnClickListener(){
+        // Set up button listeners
+        btnStartStop.setOnClickListener(new View.OnClickListener() {
             @Override
-        })
+            public void onClick(View v) {
+                if (viewModel.isRunning()) { // Use getter method
+                    viewModel.stop();
+                    btnStartStop.setText("Start");
+                } else {
+                    viewModel.start();
+                    btnStartStop.setText("Stop");
+                }
+            }
+        });
+
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewModel.reset();
+                btnStartStop.setText("Start");
+            }
+        });
     }
 
-    // TODO: Format elapsed time for display
+    // Method to format elapsed time for display
+    private String formatElapsedTime(long elapsedTime) {
+        long seconds = (elapsedTime / 1000) % 60;
+        long minutes = (elapsedTime / (1000 * 60)) % 60;
+        long hours = (elapsedTime / (1000 * 60 * 60)) % 24;
+        long tenths = (elapsedTime / 100) % 10;
+
+        return String.format("%02d:%02d:%02d.%1d", hours, minutes, seconds, tenths);
+    }
 }

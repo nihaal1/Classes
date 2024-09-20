@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.Observer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +24,19 @@ public class MainActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(StopwatchViewModel.class);
 
         // TODO: Initialize UI components (TextView, Buttons)
+        tvTime = findViewById(R.id.tvElapsedTime);
+        btnStartStop = findViewById(R.id.btnStartStop);
+        btnReset = findViewById(R.id.btnReset);
 
         // TODO: Set up button listeners for Start/Stop and Reset
+        viewModel.getElapsedTime().observe(this, new Observer<Long>() {
+            @Override
+            public void onChanged(Long elapsedTime) {
+                tvTime.setText(formatElapsedTime(elapsedTime));
+            }
+        });
+
+        btnStartStop.setOnClickListener
     }
 
     // TODO: Format elapsed time for display

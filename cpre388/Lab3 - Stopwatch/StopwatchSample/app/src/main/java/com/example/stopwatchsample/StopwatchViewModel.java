@@ -28,4 +28,42 @@ public class StopwatchViewModel extends ViewModel {
         return elapsedTimeLiveData;
     }
 
+    public void start(){
+        if (!isRunning){
+            isRunning = true;
+            handler.postDelayed(runnable, 10);
+        }
+    }
+    public void stop(){
+        if (isRunning){
+            isRunning = false;
+            handler.removeCallbacks(runnable);
+        }
+    }
+
+    public void reset(){
+        elapsedTime = 0L;
+        elapsedTimeLiveData.setValue(elapsedTime);
+        if (!isRunning) {
+            handler.removeCallbacks(runnable);
+        }
+    }
+
+    private final Runnable runnable = new Runnable(){
+        @Override
+        public void run(){
+            if (!isRunning){
+                elapsedTime += 10;
+                elapsedTimeLiveData.setValue(elapsedTime);
+                handler.postDelayed(this, 10);
+
+            }
+        }
+    };
+
+    @Override
+    protected void onCleared(){
+        super.onCleared();
+        handler.removeCallbacks(runnable);
+    }
 }

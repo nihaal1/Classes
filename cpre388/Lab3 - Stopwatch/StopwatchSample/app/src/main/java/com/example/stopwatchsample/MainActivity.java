@@ -1,6 +1,7 @@
 package com.example.stopwatchsample;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,6 +9,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
+import android.widget.TextView;
+import android.widget.Button;
+import static android.text.format.DateUtils.formatElapsedTime;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnStartStop.setOnClickListener
+        btnStartStop.setOnClickListener(new View.OnClickListener(){
+            @Override
+        })
     }
 
     // TODO: Format elapsed time for display

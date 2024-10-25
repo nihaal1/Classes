@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements
 
         // Initialize Firestore and the main RecyclerView
         mFirestore = FirebaseUtil.getFirestore();
+        mQuery = mFirestore.collection("restaurants").orderBy("avgRating", Query.Direction.DESCENDING).limit(LIMIT);
         initRecyclerView();
 
         // Filter Dialog
@@ -176,7 +177,9 @@ public class MainActivity extends AppCompatActivity implements
     }
     private void onAddItemsClicked() {
         // TODO(developer): Add random restaurants
-        showTodoToast();
+        CollectionReference restaurants = mFirestore.collection("restaurants");
+        restaurants.add(RestaurantUtil.getRandom(this));
+        // showTodoToast();
     }
 
 

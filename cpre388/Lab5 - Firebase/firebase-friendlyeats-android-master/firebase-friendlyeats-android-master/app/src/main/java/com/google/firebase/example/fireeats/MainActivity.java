@@ -185,14 +185,37 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void onFilter(Filters filters) {
-        // TODO(developer): Construct new query
-        showTodoToast();
 
-        // Set header
-        mCurrentSearchView.setText(Html.fromHtml(filters.getSearchDescription(this)));
+        Query query = mFirestore.collectionGroup("restaurants"); //hint: CollectionReference extends Query
+
+        if(filters.hasCategory()){
+            query = query.whereEqualTo("category", filters.getCategory());
+        }
+
+
+        if(filters.hasCity()){
+            query = query.whereEqualTo("city", filters.getCity());
+        }
+
+        if (filters.hasPrice()){
+            query = query.whereEqualTo("price", filters.getPrice());
+        }
+
+        if (filters.hasSortBy()){
+            String field = filters.getSortBy();
+            Query.Direction direction = filters.getSortDirection();
+            query = query.orderBy(field, direction);
+        }
+// Limit items
+        query = query.limit(LIMIT);
+// Update the query
+        mQuery = query;
+        mAdapter.setQuery(query);
+// Set header
+        mCurrentSearchView.setText(
+                Html.fromHtml(filters.getSearchDescription(this)));
         mCurrentSortByView.setText(filters.getOrderDescription(this));
-
-        // Save filters
+// Save filters
         mViewModel.setFilters(filters);
     }
 

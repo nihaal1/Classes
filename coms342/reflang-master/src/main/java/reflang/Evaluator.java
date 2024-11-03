@@ -261,4 +261,18 @@ public class Evaluator implements Visitor<Value> {
         heap.free(loc);
         return new Value.UnitVal();
     }
+
+    @Override
+    public Value visit(RefEqExp e, Env env) {
+        Value v1 = e.e1().accept(this, env);
+        Value v2 = e.e2().accept(this, env);
+
+        // Check if both values are RefVal instances and compare their locations
+        if (v1 instanceof Value.RefVal && v2 instanceof Value.RefVal) {
+            boolean areEqual = ((Value.RefVal) v1).loc() == ((Value.RefVal) v2).loc();
+            return new Value.BoolVal(areEqual);
+        } else {
+            return new Value.DynamicError("== operator can only be applied to references");
+        }
+    }
 }

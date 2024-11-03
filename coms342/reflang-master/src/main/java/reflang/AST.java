@@ -63,6 +63,8 @@ public interface AST {
         T visit(AST.DerefExp e, Env env);  // new for reflang
 
         T visit(AST.FreeExp e, Env env);   // new for reflang
+
+        T visit(AST.RefEqExp e, Env env); // New for RefLang
     }
 
     abstract class ASTNode implements AST {
@@ -580,5 +582,27 @@ public interface AST {
             return _value_exp;
         }
 
+    }
+
+    class RefEqExp extends Exp {
+        private final Exp _e1;
+        private final Exp _e2;
+
+        public RefEqExp(Exp e1, Exp e2) {
+            _e1 = e1;
+            _e2 = e2;
+        }
+
+        public Exp e1() {
+            return _e1;
+        }
+
+        public Exp e2() {
+            return _e2;
+        }
+
+        public <T> T accept(Visitor<T> visitor, Env env) {
+            return visitor.visit(this, env);
+        }
     }
 }

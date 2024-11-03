@@ -1,0 +1,5 @@
+(let ((length 12) (width 14))
+   (let ((peri (+ (* 2 length) (* 2 width))))
+      peri
+   )
+)

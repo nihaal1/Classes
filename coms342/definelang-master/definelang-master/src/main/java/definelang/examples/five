@@ -1,0 +1,10 @@
+(+
+   (let ((numerator 9) (denominator 5))
+      (let ((ratio (/ numerator denominator)))
+         (* ratio c)
+      )
+   )
+   (let ((min 32))
+      min
+   )
+)

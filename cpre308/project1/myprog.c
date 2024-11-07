@@ -7,7 +7,7 @@
 #include <signal.h>
 #include <sys/wait.h>
 
-#define DEBUG 0
+#define DEBUG 1
 #define MAX_PATH_SIZE 300
 
 int main(int argc, char **argv)

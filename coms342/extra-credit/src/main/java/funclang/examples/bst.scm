@@ -14,3 +14,21 @@
   (lambda (node)
     (car node)
     ))
+
+// Get the value of a node
+(define getValue
+  (lambda (node)
+    (cdr node)
+    ))
+
+// Get the left child of a root node
+(define getLeft
+  (lambda (node)
+    (car (cdr (cdr node)))
+    ))
+
+// Get the right child of a root node
+(define getRight
+  (lambda (node)
+    (cdr (cdr (cdr node)))
+    ))

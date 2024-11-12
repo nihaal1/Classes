@@ -1,16 +1,13 @@
 // Define a node in the binary search tree
 (define leaf
   (lambda (val)
-    (cons #t val)
+    (list #t val (list) (list))
     ))
 
-//(define root
-//  (lambda (val left right)
-//    (cons #f (cons val (cons left right)))
-//    ))
 
 (define root
   (lambda (val left right)
+//    (cons #f (cons val (cons left right)))
     (list #f val left right)
     ))
 

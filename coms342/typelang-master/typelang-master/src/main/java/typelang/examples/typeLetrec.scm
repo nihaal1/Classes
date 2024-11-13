@@ -1,0 +1,15 @@
+(letrec 
+	(
+		(isEven : (num -> bool) 
+			(lambda (n : num) 
+				(if (= 0 n) #t  (isOdd  (- n 1)))
+			)
+		)
+		(isOdd  : (num -> bool) 
+			(lambda (n : num) 
+				(if (= 0 n) #f  (isEven (- n 1)))
+			)
+		)
+	)
+	(isOdd 11)
+)

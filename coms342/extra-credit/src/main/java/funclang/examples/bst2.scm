@@ -4,10 +4,8 @@
     (list #t val (list) (list))
     ))
 
-
 (define root
   (lambda (val left right)
-//    (cons #f (cons val (cons left right)))
     (list #f val left right)
     ))
 
@@ -20,7 +18,6 @@
 // Get the value of a node
 (define getValue
   (lambda (node)
-    //(cdr node)
     (car (cdr node))
     ))
 
@@ -36,20 +33,7 @@
     (cdr (cdr (cdr node)))
     ))
 
-(define bst
-  (lambda (lst)
-    (if (null? lst)
-      (list)
-      (insert (list) lst)
-      )))
-
-(define insert
-  (lambda (tree lst)
-    (if (null? lst)
-      tree
-      (insert (insertSingle tree (car lst)) (cdr lst))
-      )))
-
+// Helper function for inserting a single value into the BST
 (define insertSingle
   (lambda (node val)
     (if (null? node)
@@ -68,25 +52,43 @@
         )
       )))
 
+// Insert a list of values into the BST
+(define insert
+  (lambda (tree lst)
+    (if (null? lst)
+      tree
+      (insert (insertSingle tree (car lst)) (cdr lst))
+      )))
+
+// Constructor function: builds a BST from a list of numbers
+(define bst
+  (lambda (lst)
+    (if (null? lst)
+      (list)
+      (insert (list) lst)
+      )))
+
+// In-order traversal to get a sorted list of values in the BST
 (define getlist
   (lambda (node)
     (if (null? node)
-      (list)  ; Return an empty list for an empty tree
+      (list)
       (if (isLeaf node)
-        (list (getValue node))  ; If it's a leaf, return its value in a list
-        (append (getlist (getLeft node))  ; In-order traversal: left, root, right
+        (list (getValue node))
+        (append (getlist (getLeft node))
           (list (getValue node))
           (getlist (getRight node))
           )
         )
       )))
 
+// Get a nested list structure representing the tree
 (define gettree
   (lambda (node)
     (if (null? node)
-      (list)  ; Return an empty list for an empty tree
+      (list)
       (if (isLeaf node)
-        (list (getValue node) (list) (list))  ; Leaf node structure
+        (list (getValue node) (list) (list))
         (list (getValue node)
               (gettree (getLeft node))
               (gettree (getRight node))

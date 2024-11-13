@@ -26,6 +26,20 @@
   (lambda (tree)
     (null? tree)))
 
+(define append
+        (lambda (lst1 lst2)
+          (if (null? lst1)
+            lst2
+            (cons (car lst1)
+              (append (cdr lst1) lst2)))))
+
+(define reverse
+        (lambda (lst)
+          (if (null? lst)
+            lst
+            (append (reverse (cdr lst))
+              (list (car lst))))))
+
 (define insertValue
   (lambda (tree val)
     (if (isEmpty tree)

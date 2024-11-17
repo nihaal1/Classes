@@ -26,6 +26,7 @@ exp returns [Exp ast]:
     	| deref=derefexp   { $ast = $deref.ast; }     // new for RefLang
     	| assign=assignexp { $ast = $assign.ast; }    // new for RefLang
     	| free=freeexp     { $ast = $free.ast; }      // new for RefLang
+    	| refEq=refeqexp   { $ast = $refEq.ast; }     // new for RefLang HW
     	;
 
  // New Expressions for RefLang
@@ -43,6 +44,10 @@ assignexp returns [AssignExp ast] :
 
 freeexp returns [FreeExp ast] :
     '(' Free e=exp ')' { $ast = new FreeExp($e.ast); }
+    ;
+
+refeqexp returns [RefEqExp ast] :
+    '(' '==' e1=exp e2=exp ')' { $ast = new RefEqExp($e1.ast, $e2.ast); }
     ;
          
  // Lexical Specification of this Programming Language

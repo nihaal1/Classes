@@ -204,5 +204,13 @@ public class Printer {
         public String visit(AST.FreeExp e, Env<T> env) {
             return "(free %s)".formatted(e.value_exp().accept(this, env));
         }
+
+        @Override
+        public String visit(AST.RefEqExp e, Env<T> env) {
+            return "(== %s %s)".formatted(
+                    e.e1().accept(this, env),
+                    e.e2().accept(this, env)
+            );
+        }
     }
 }

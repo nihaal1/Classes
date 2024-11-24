@@ -1,0 +1,22 @@
+(define member : (num List<num> -> bool)
+               (lambda (x : num lst : List<num>)
+                 (if (null? lst)
+                   #f
+                   (if (= (car lst) x)
+                     #t
+                     (member x (cdr lst)))
+                   )
+                 )
+  )
+
+(define unique : (List<num> -> List<num>)
+               (lambda (lst : List<num>)
+                 (if (null? lst)
+                   (list : num)
+                   (if (member (car lst) (cdr lst))
+                     (unique (cdr lst))
+                     (cons (car lst) (unique (cdr lst)))
+                     )
+                   )
+                 )
+  )

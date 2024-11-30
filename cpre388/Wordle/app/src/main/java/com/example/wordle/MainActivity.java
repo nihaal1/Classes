@@ -34,6 +34,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -42,11 +43,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wordle.databinding.ActivityMainBinding;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    private final String WORD = "dubai";
+    private final String WORD;
 
+
+    public MainActivity() {
+        // Randomly select a word from the list
+        Random random = new Random();
+        WORD = FIVE_LETTER_WORDS[random.nextInt(FIVE_LETTER_WORDS.length)];
+    }
+
+    private static final String[] FIVE_LETTER_WORDS = {
+            "apple", "brick", "chair", "dream", "eagle", "fruit", "grape", "house",
+            "joker", "knife", "lemon", "magic", "night", "ocean", "pearl", "queen",
+            "river", "storm", "table", "union", "vital", "world", "xenon", "yield", "zebra"
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
         keepPassingFocus();
         setupRowValidation();
+
+        // Debugging: Print the randomly selected word in the log
+        Log.d("WORDLE", "The selected word is: " + WORD);
     }
 
     private void setupRowValidation() {

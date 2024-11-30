@@ -475,4 +475,21 @@ public class Checker implements Visitor<Type, Type> {
 
         return new ErrorT("The free expression expects a reference type " + "found " + type.toString() + " in " + ts.visit(e, null));
     }
+
+    @Override
+    public Type visit(RefEqExp e, Env<Type> env) {
+        Type t1 = e.e1().accept(this, env);
+        Type t2 = e.e2().accept(this, env);
+
+        if (!(t1 instanceof RefT)) {
+            return new ErrorT("The first operand of == must be a reference type");
+        }
+
+        if (!(t2 instanceof RefT)) {
+            return new ErrorT("The second operand of == must be a reference type");
+        }
+
+        return BoolT.getInstance();
+    }
+
 }

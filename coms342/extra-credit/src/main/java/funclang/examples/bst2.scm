@@ -33,24 +33,62 @@
     (cdr (cdr (cdr node)))
     ))
 
+//check if tree is empty
+(define isEmpty
+  (lambda (tree)
+    (null? tree)))
+
+//append function
+(define append
+        (lambda (lst1 lst2)
+          (if (null? lst1)
+            lst2
+            (cons (car lst1)
+              (append (cdr lst1) lst2)))))
+
+//reverse function
+(define reverse
+        (lambda (lst)
+          (if (null? lst)
+            lst
+            (append (reverse (cdr lst))
+              (list (car lst))))))
+
 // Helper function for inserting a single value into the BST
+//(define insertSingle
+//  (lambda (tree val)
+//    (if (isEmpty tree)
+//      (leaf val)
+//      (if (isLeaf tree)
+//        (if (< val (getValue tree))
+//          (root (getValue tree) (leaf val) (list))
+//          (root (getValue tree) (list) (leaf val))
+//          )
+//       (let ((nodeValue (getValue tree)))
+//          (if (< val nodeValue)
+//            (root nodeValue (insertSingle (getLeft tree) val) (getRight tree))
+//            (root nodeValue (getLeft tree) (insertSingle (getRight tree) val))
+//            )
+//          )
+//        )
+//      )))
+
 (define insertSingle
-  (lambda (node val)
-    (if (null? node)
+  (lambda (tree val)
+    (if (isEmpty tree)
       (leaf val)
-      (if (isLeaf node)
-        (if (< val (getValue node))
-          (root (getValue node) (leaf val) (list))
-          (root (getValue node) (list) (leaf val))
-          )
-        (let ((nodeValue (getValue node)))
-          (if (< val nodeValue)
-            (root nodeValue (insertSingle (getLeft node) val) (getRight node))
-            (root nodeValue (getLeft node) (insertSingle (getRight node) val))
-            )
-          )
-        )
-      )))
+      (let ((current_val (getValue tree)))
+        (if (isLeaf tree)
+          (if (< val current_val)
+            (root current_val (leaf val) (list))
+            (root current_val (list) (leaf val)))
+          (if (< val current_val)
+            (root current_val
+              (insertSingle (getLeft tree) val)
+              (getRight tree))
+            (root current_val
+              (getLeft tree)
+              (insertSingle (getRight tree) val))))))))
 
 // Insert a list of values into the BST
 (define insert
@@ -65,7 +103,8 @@
   (lambda (lst)
     (if (null? lst)
       (list)
-      (insert (list) lst)
+      //(insert (list) lst)
+      (insert (bst (cdr lst)) (list (car lst)))
       )))
 
 // In-order traversal to get a sorted list of values in the BST

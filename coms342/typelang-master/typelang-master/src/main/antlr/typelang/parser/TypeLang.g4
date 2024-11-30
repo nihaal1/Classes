@@ -63,6 +63,10 @@ refexp returns [RefExp ast] :
     '(' Ref ':' ty1=type e=exp ')' { $ast = new RefExp($e.ast, $ty1.ty); }
     ;
 
+refeqexp returns [RefEqExp ast] :
+    '(' '==' e1=exp e2=exp ')' { $ast = new RefEqExp($e1.ast, $e2.ast); }
+    ;
+
 // New Expressions for FuncLang
 lambdaexp returns [LambdaExp ast]
     locals [

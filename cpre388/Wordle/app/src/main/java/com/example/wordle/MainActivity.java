@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             makeGameInactive();
             Toast.makeText(getApplicationContext(), "Congratulations, you have guessed the right word.", Toast.LENGTH_SHORT).show();
         } else if (rowEditTexts[rowEditTexts.length - 1].getId() == R.id.edt_65) {
-            binding.idTVCongo.setText("Sorry, you couldn't guess the word.");
+            binding.idTVCongo.setText("Sorry, you couldn't guess the word. The correct word was: " + WORD);
             binding.idTVCongo.setVisibility(View.VISIBLE);
             makeGameInactive();
             Toast.makeText(getApplicationContext(), "The correct word was: " + WORD, Toast.LENGTH_SHORT).show();        }
